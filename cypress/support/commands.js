@@ -1,25 +1,31 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import HomePage from '../pages/homePage';
+import futureDate from '../utils/randomDate';
+
+Cypress.Commands.add("selectDate", function (checkIn, checkOut) {
+    // Creating Object for HomePage
+    const home = new HomePage();
+
+    home.getCalendar().should('be.visible');
+    // two clicks 
+    home.getNextArrow().click();
+    home.getNextArrow().click();
+
+    home.getCheckInDay(futureDate(checkIn)).click();
+
+    cy.wait(3000)
+
+    home.getNextArrow().click();
+    home.getCheckInDay(futureDate(checkOut)).click();
+
+})
+
+Cypress.Commands.add("configLangAndCurrency", function () {
+    // Creating Object for HomePage
+    const home = new HomePage();
+
+    home.getCurrencyBtn().click();
+    home.getCurrencyOptions().contains('COP').click();
+    home.getLanguageOption().click();
+    home.getSpanishLangOption().click();
+    
+})
