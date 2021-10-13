@@ -1,9 +1,11 @@
 class SelectedOptionPage {
+  
     getReserveBtn() {
-        return cy.get('.txp-group-cta').first()
+        return cy.get('.txp-group-cta').first();
     }
+  
     getConfirmationBtn() {
-        return cy.get('.txp-bui-main-pp')
+        return cy.get('.txp-bui-main-pp');
     }
 }
 

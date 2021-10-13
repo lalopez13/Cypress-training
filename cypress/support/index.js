@@ -26,7 +26,7 @@ beforeEach(() => {
     // assertion to check if correct option is selected
     home.getDestinationField().should("have.value", "Cartagena de Indias, Bolívar, Colombia");
 
-// Select check- in and checkout date
+    // Select check- in and checkout date
     cy.selectDate(90, 110)
 
     // Select guest option
@@ -41,6 +41,6 @@ beforeEach(() => {
 
 Cypress.on('uncaught:exception', (err, runnable) => {
     // returning false here prevents Cypress from
-  // failing the test
+    // failing the test
     return false
-    })
+})

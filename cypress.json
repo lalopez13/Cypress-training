@@ -1,3 +1,7 @@
 {
- "baseUrl": "https://www.booking.com/" 
+ "baseUrl": "https://www.booking.com" ,
+ "defaultCommandTimeout": 10000,
+ "viewportWidth": 1440,
+ "viewportHeight": 900,
+ "chromeWebSecurity": false
 }

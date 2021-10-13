@@ -1,15 +1,15 @@
 class HomePage {
     getCurrencyBtn() {
-        return cy.get('.bui-group > :nth-child(1) > .bui-button')
+        return cy.get('.bui-group > :nth-child(1) > .bui-button');
     }
     getCurrencyOptions() {
-        return cy.get('.bui-inline-container__main')
+        return cy.get('.bui-inline-container__main');
     }
     getLanguageOption() {
-        return cy.get('[data-modal-id="language-selection"]')
+        return cy.get('[data-modal-id="language-selection"]');
     }
     getSpanishLangOption() {
-        return cy.get('[data-lang="es"]').first()
+        return cy.get('[data-lang="es"]').first();
     }
     getDestinationField() {
         return cy.get('#ss');
