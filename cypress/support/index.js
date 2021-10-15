@@ -1,6 +1,7 @@
 // ***********************************************************
 import './commands';
 import HomePage from '../pages/homePage';
+import 'cypress-xpath';
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 beforeEach(() => {
