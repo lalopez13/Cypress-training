@@ -3,6 +3,7 @@
 import ResultsPage from '../../pages/resultsPage';
 import SelectedOptionPage from '../../pages/selectedOptionPage'
 import BookingPage from '../../pages/bookingPage';
+import testData from '../../fixtures/testdata.json'
 
 const result = new ResultsPage();
 const hotel = new SelectedOptionPage();
