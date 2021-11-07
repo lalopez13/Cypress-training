@@ -6,7 +6,7 @@ function futureDate(days) {
 
     today.setDate(today.getDate() + days);
 
-    // Months are cero indexed and one two match with the format 
+    // Months are cero indexed add one two match with the format 
     // date in the page
 
     const month = today.getMonth() + 1;
