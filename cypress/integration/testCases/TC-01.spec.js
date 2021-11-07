@@ -67,7 +67,7 @@ describe("TC-01: Lowest price reservation", () => {
         });
 
 
-        // Reserve hotel
+        // Reserve hotel test
 
         hotel.getReserveBtn().click()
         cy.wait(5000)
